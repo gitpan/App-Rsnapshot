@@ -1,0 +1,9 @@
+SIGNIFICANT CHANGES IN rsnapshot-ng
+
+Deleted all docbook stuff - it's been unmaintained for some time
+Deleted redhat stuff - not germane to this project
+Deleted generated manpages - shouldn't be in version control,
+  as they're generated from something else that's already in version
+  control!
+Deleted autoconf stuff - switching to CPAN-stylee
+Added copy of XML::Tiny - to use in new-style config parser
