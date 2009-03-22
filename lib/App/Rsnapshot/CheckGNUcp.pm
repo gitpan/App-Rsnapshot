@@ -46,10 +46,11 @@ sub isgnucp {
         die("Can't create $dir/foo to test whether $binary supports -al\n");
     print TEMPFILE "Testing";
     close(TEMPFILE);
-    open(my $REALSTDERR, ">&STDERR") || die("Can't dup STDERR\n");
-    close(STDERR);
-    system($binary, '-al', "$dir/foo", "$dir/bar");
-    open(STDERR, '>&', $REALSTDERR) || die("Can't dup saved STDERR\n");
+    # open(my $REALSTDERR, ">&STDERR") || die("Can't dup STDERR\n");
+    # close(STDERR);
+    # system($binary, '-al', "$dir/foo", "$dir/bar");
+    system(qq{$binary -al "$dir/foo" "$dir/bar" 2>/dev/null});
+    # open(STDERR, '>&', $REALSTDERR) || die("Can't dup saved STDERR\n");
     my $rval = 0;
     if(-e "$dir/bar" && ((stat("$dir/foo"))[1] == (stat("$dir/bar"))[1])) { # same inode
         $rval = 1;

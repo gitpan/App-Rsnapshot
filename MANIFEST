@@ -2,7 +2,6 @@ AUTHORS
 COPYING
 ChangeLog
 INSTALL
-etc/rsnapshot.conf.default
 bin/rsnapshot
 bin/rsnapshot-diff
 lib/App/Rsnapshot/XML/Tiny.pm
@@ -267,4 +266,13 @@ utils/rsnapshotdb/rsnapshotDB.pl
 utils/rsnapshotdb/rsnapshotDB.xsd
 utils/rsnaptar
 utils/sign_packages.sh
+etc/rsnapshot.conf.xml
+lib/App/Rsnapshot/Config.pm
+.gitignore
+lib/App/Rsnapshot/Config/Node.pm
+t/app-rsnapshot-config/app-rsnapshot-config.t
+t/app-rsnapshot-config/rsnapshot.conf.xml
+lib/App/Rsnapshot/Rotate.pm
+t/app-rsnapshot-rotate/firstinterval.t
+t/app-rsnapshot-rotate/laterinterval.t
 META.yml                                 Module meta-data (added by MakeMaker)

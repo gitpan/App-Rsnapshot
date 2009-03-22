@@ -15,15 +15,15 @@ local $^W = 1;    # can't use warnings as that's a 5.6-ism
 
 =head1 NAME
 
-XML::Tiny - simple lightweight parser for a subset of XML
+App::Rsnapshot::XML::Tiny - simple lightweight parser for a subset of XML
 
 =head1 DESCRIPTION
 
-XML::Tiny is a simple lightweight parser for a subset of XML
+App::Rsnapshot::XML::Tiny is a simple lightweight parser for a subset of XML
 
 =head1 SYNOPSIS
 
-    use XML::Tiny qw(parsefile);
+    use App::Rsnapshot::XML::Tiny qw(parsefile);
     open($xmlfile, 'something.xml);
     my $document = parsefile($xmlfile);
 
@@ -310,10 +310,10 @@ Instead of saying this:
 
 you would say:
 
-  use XML::Tiny;
-  my $tree = XML::Tiny::parsefile('something.xml');
+  use App::Rsnapshot::XML::Tiny;
+  my $tree = App::Rsnapshot::XML::Tiny::parsefile('something.xml');
 
-Any valid document that can be parsed like that using XML::Tiny should
+Any valid document that can be parsed like that using App::Rsnapshot::XML::Tiny should
 produce identical results if you use the above example of how to use
 L<XML::Parser::EasyTree>.
 
@@ -326,7 +326,7 @@ The module is intended to be fully compatible with every version of perl
 back to and including 5.004, and may be compatible with even older
 versions of perl 5.
 
-The lack of Unicode and friends in older perls means that XML::Tiny
+The lack of Unicode and friends in older perls means that App::Rsnapshot::XML::Tiny
 does nothing with character sets.  If you have a document with a funny
 character set, then you will need to open the file in an appropriate
 mode using a character-set-friendly perl and pass the resulting file
@@ -414,7 +414,7 @@ realise what installing and using a full implementation entails, they
 quite often don't *want* it.  Another class of users, people
 distributing applications, often can not rely on users being able to
 install modules from the CPAN, or even having tools like make or a shell
-available.  XML::Tiny exists for those people.
+available.  App::Rsnapshot::XML::Tiny exists for those people.
 
 =head1 BUGS and FEEDBACK
 
